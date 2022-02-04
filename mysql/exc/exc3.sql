@@ -39,5 +39,5 @@ comment
 ,2
 );
 
-select * from review4;
+select * from book4;
 

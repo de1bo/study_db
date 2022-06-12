@@ -31,7 +31,7 @@ FROM
 left join homepage as a on a.infMember_seq = z.seq and a.defaultNy=1
 left join phone as b on b.infMember_seq = z.seq and b.defaultNy=1;
 
-
+use world;
  -- homepage as a
 -- , phone as b
 -- , SNS as c

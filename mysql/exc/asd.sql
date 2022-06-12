@@ -1,4 +1,4 @@
-select distinct
+select
 z.seq
 ,(select ifcdName from infrcode where ifcdOrder = ifmmAdminCd and infrCodeGroup_ifcgSeq = 1) as Admistrator
 ,(select ifcdName from infrcode where ifcdOrder = ifmmRegistTypeCd and infrCodeGroup_ifcgSeq = 2) as ifmmRegistTypeCd
@@ -20,7 +20,7 @@ z.seq
 ,z.ifmmRecommendSeq
 ,(select ifcdName from infrcode where ifcdOrder = ifmmEmailConsentNy and infrCodeGroup_ifcgSeq = 12) as EmailConsent
 ,(select ifcdName from infrcode where ifcdOrder = ifmmPersonerinfoCd and infrCodeGroup_ifcgSeq = 4) as Personerinfo
-,z.DelNy
+,z.ifmmDelNy
 FROM
 infrmember as z
 left join infrMemberEmail as a on a.infrMember_Seq = z.seq and a.ifmeDelNy = 0
